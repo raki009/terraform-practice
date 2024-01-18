@@ -7,5 +7,5 @@ output "v2" {
 }
 
 output "v3" {
-  value = var.v3[xyz]
+  value = var.v3["xyz"]
 }
