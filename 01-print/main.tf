@@ -15,5 +15,5 @@ output "colour2" {
 }
 
 output "fruits" {
-  value = "The qty of banana is-${lookup(var.fruits["mango"], "qty", "no banana")}"
+  value = "The qty of banana is-${lookup(var.fruits["banana"], "qty", "no banana")}"
 }
