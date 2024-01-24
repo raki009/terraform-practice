@@ -7,14 +7,13 @@ output "v2" {
 }
 
 output "colour" {
-  value = lookup[var.colour, "orange", no orange]
+  value = lookup(var.colour, "orange", "no orange")
 }
 
-output "colour" {
-  value = lookup(var.colour, "xyz", "doesnot exists")
+output "colour2" {
+  value = lookup(var.colour, "xyz", "does not exists")
 }
 
 output "fruits" {
-  value = lookup(var.fruits, "banana", no banana)
+  value = lookup(var.fruits, "banana", "no banana")
 }
-
