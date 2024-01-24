@@ -15,5 +15,5 @@ output "colour2" {
 }
 
 output "fruits" {
-  value = lookup(var.fruits, "banana", "no banana").qty
+  value = "The qty of banana is-${lookup(var.fruits, "banana", "no banana").qty}"
 }
