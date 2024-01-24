@@ -6,6 +6,15 @@ output "v2" {
   value = var.v2[2]
 }
 
-output "v3" {
-  value = var.v3["xyz"]
+output "colour" {
+  value = lookup[var.colour, "orange", no orange]
 }
+
+output "colour" {
+  value = lookup(var.colour, "xyz", "doesnot exists")
+}
+
+output "fruits" {
+  value = lookup(var.fruits, "banana", no banana)
+}
+
