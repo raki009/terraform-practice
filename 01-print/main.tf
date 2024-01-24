@@ -15,5 +15,5 @@ output "colour2" {
 }
 
 output "fruits" {
-  value = lookup(var.fruits, "banana", "no banana")
+  value = lookup(var.fruits, "banana"[qty], "no banana")
 }
