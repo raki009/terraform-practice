@@ -16,12 +16,12 @@ variable "colour" {
 variable "fruits" {
   default = {
     apples = {
-      colour = reddish
-      qty = 1kg
+      colour = "reddish"
+      qty = "1kg"
     }
     banana = {
-      colour = yellow
-      qty = 1dozen
+      colour = "yellow"
+      qty = "1dozen"
     }
   }
 }
