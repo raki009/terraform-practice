@@ -24,7 +24,7 @@ resource "aws_internet_gateway" "main" {
   }
 }
 
-resource "aws_subnet" "public" {
+resource "aws_subnet" "public_subnets" {
   count      = length(var.public_subnets_cidr)
   vpc_id     = aws_vpc.main.id
   cidr_block = element(var.public_subnets_cidr, count.index)
@@ -56,10 +56,10 @@ resource "aws_route_table" "public" {
 resource "aws_route_table_association" "public" {
   count          = length(var.public_subnets_cidr)
   route_table_id = lookup(element(aws_route_table.public, count.index), "id", null)
-  subnet_id      = lookup(element(aws_subnet.public, count.index), "id", null)
+  subnet_id      = lookup(element(aws_subnet.public_subnets, count.index), "id", null)
 }
 
-resource "aws_subnet" "private" {
+resource "aws_subnet" "private_subnets" {
   count      = length(var.private_subnets_cidr)
   vpc_id     = aws_vpc.main.id
   cidr_block = element(var.private_subnets_cidr, count.index)
