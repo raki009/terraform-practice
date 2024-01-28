@@ -1,4 +1,5 @@
 env = "dev"
+project_name = "test"
 
 vpc = {
   main = {
