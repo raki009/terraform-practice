@@ -75,7 +75,7 @@ resource "aws_route_table" "app" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.main.id
+    nat_gateway_id = lookup(element(aws_nat_gateway.main, count.index), "id", null)
   }
 
   route {
@@ -110,7 +110,7 @@ resource "aws_route_table" "db" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.main.id
+    nat_gateway_id = lookup(element(aws_nat_gateway.main, count.index), "id", null)
   }
 
   route {
