@@ -12,3 +12,14 @@ module "vpc" {
   env      = var.env
   project_name = var.project_name
 }
+
+module "rds" {
+  source = "./modules/rds"
+  for_each = var.rds
+  allocated_storage    = lookup(each.value, "allocated_storage", null)
+  db_name              = lookup(each.value, "db_name", null)
+  engine               = lookup(each.value, "mysql", null)
+  engine_version       = lookup(each.value, "5.7", null)
+  family               = lookup(each.value, "5.7", null)
+  instance_class       = lookup(each.value, "db.t3.micro", null)
+}
