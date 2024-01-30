@@ -22,4 +22,6 @@ module "rds" {
   engine_version       = lookup(each.value, "5.7", null)
   family               = lookup(each.value, "5.7", null)
   instance_class       = lookup(each.value, "db.t3.micro", null)
+  env          = var.env
+  project_name = var.project_name
 }
