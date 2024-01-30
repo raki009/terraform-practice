@@ -4,3 +4,5 @@ variable "engine" {}
 variable "engine_version" {}
 variable "instance_class" {}
 variable "family" {}
+variable "env" {}
+variable "project_name" {}
