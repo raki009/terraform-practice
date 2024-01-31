@@ -50,7 +50,7 @@ resource "aws_db_instance" "main" {
   parameter_group_name  = aws_db_parameter_group.main.name
   skip_final_snapshot   = true
   storage_encrypted     = true
-  kms_key_id            = "var.kms_key_id"
+  kms_key_id            = var.kms_key_id
   db_subnet_group_name  = aws_db_subnet_group.main.name # created in the respective subnet group
   vpc_security_group_ids = [aws_security_group.main.id]
 }

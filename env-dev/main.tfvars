@@ -1,5 +1,5 @@
-env = "dev"
-project_name = "expense"
+env                  = "dev"
+project_name         = "expense"
 kms_key_id           = "arn:aws:kms:us-east-1:194840184236:key/071f905f-600f-4635-a78a-4052fef73d3a"
 
 
