@@ -1,5 +1,5 @@
 env = "dev"
-project_name = "test"
+project_name = "expense"
 
 vpc = {
   main = {
@@ -12,13 +12,13 @@ vpc = {
   }
 }
 
-#rds ={
-#  main = {
-#    allocated_storage = 10
-#    db_name              = "expense"
-#    engine               = "mysql"
-#    engine_version       = "5.7"
-#    instance_class       = "db.t3.micro"
-#    family               = "mysql5.7"
-#  }
-#}
+rds ={
+  main = {
+    allocated_storage = 10
+    db_name              = "expense"
+    engine               = "mysql"
+    engine_version       = "5.7"
+    instance_class       = "db.t3.micro"
+    family               = "mysql5.7"
+  }
+}
