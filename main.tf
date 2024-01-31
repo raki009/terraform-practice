@@ -20,7 +20,7 @@ module "rds" {
   db_name              = lookup(each.value, "db_name", null)
   engine               = lookup(each.value, "engine", null)
   engine_version       = lookup(each.value, "engine_version", null)
-  family               = lookup(each.value, "engine_version", null)
+  family               = lookup(each.value, "family", null)
   instance_class       = lookup(each.value, "instance_class", null)
 
 
