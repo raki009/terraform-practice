@@ -3,7 +3,6 @@ resource "aws_db_parameter_group" "main" {
   family = var.family
 }
 
-
 resource "aws_db_subnet_group" "main" {
   name         = "${var.env}-${var.project_name}-sg"
   subnet_ids   =  var.subnet_ids
@@ -18,12 +17,14 @@ resource "aws_security_group" "main" {
   description = "${var.env}-${var.project_name}-rds-sg"
   vpc_id      =  var.vpc_id
 
-  egress {
+  ingress {
     from_port = 3306
     to_port = 3306
     protocol = "tcp"
     cidr_blocks = var.sg_cidr_blocks
   }
+
+
   egress {
     from_port = 0
     to_port = 0
