@@ -1,6 +1,7 @@
 variable "env" {}
 variable "project_name" {}
 variable "kms_key_id" {}
+variable "bastion_cidrs" {}
 
 
 variable "vpc_cidr" {}
@@ -19,6 +20,9 @@ variable "rds_family" {}
 variable "rds_instance_class" {}
 
 variable "backend_app_port" {}
-variable "bastion_cidrs" {}
 variable "backend_instance_capacity" {}
 variable "backend_instance_type" {}
+
+variable "frontend_app_port" {}
+variable "frontend_instance_capacity" {}
+variable "frontend_instance_type" {}
