@@ -82,7 +82,7 @@ module "backend" {
   vpc_zone_identifier        = module.vpc.app_subnets_ids # declaring the subnet
 }
 
-module "backend" {
+module "frontend" {
   source = "./modules/app"
 
   app_port          = var.frontend_app_port
