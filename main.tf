@@ -112,7 +112,7 @@ module "public-alb" {
   vpc_id         = module.vpc.vpc_id
 }
 
-module "public-alb" {
+module "private-alb" {
   source = "./modules/alb"
 
 
