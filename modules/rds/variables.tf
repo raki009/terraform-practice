@@ -1,5 +1,5 @@
 variable "allocated_storage" {}
-variable "db_name" {}
+variable "dbname" {}
 variable "engine" {}
 variable "engine_version" {}
 variable "instance_class" {}

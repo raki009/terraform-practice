@@ -42,7 +42,7 @@ resource "aws_security_group" "main" {
 resource "aws_db_instance" "main" {
   identifier            ="${var.env}-${var.project_name}-rds"
   allocated_storage     = var.allocated_storage
-  db_name               = var.db_name
+  db_name               = var.dbname
   engine                = var.engine
   engine_version        = var.engine_version
   instance_class        = var.instance_class
