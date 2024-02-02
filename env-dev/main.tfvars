@@ -3,6 +3,7 @@ project_name         = "expense"
 kms_key_id           = "arn:aws:kms:us-east-1:194840184236:key/071f905f-600f-4635-a78a-4052fef73d3a"
 bastion_cidrs        = ["172.31.46.209/32"]  # /32 represents single ip
 acm_arn              = "arn:aws:acm:us-east-1:194840184236:certificate/b2beb78e-8641-40f1-bf83-26fc1ac6f792"
+zone_id              = "Z037284028GA91JCV2UZO"
 #vpc = {
 #  main = {
 #    vpc_cidr             = "10.10.0.0/21"
