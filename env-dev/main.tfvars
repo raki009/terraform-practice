@@ -2,7 +2,7 @@ env                  = "dev"
 project_name         = "expense"
 kms_key_id           = "arn:aws:kms:us-east-1:194840184236:key/071f905f-600f-4635-a78a-4052fef73d3a"
 bastion_cidrs        = ["172.31.46.209/32"]  # /32 represents single ip
-
+acm_arn              = "arn:aws:acm:us-east-1:194840184236:certificate/e443566c-7895-491c-bde6-2b30a29484e6"
 #vpc = {
 #  main = {
 #    vpc_cidr             = "10.10.0.0/21"
